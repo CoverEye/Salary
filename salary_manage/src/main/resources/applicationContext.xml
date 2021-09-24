@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+">
+
+
+    <!--1、加载jdbc.properties-->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+
+    <!--2、配置数据源对象-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+<!--        <property name="driverClassName" value="${jdbc.driver}"/>-->
+<!--        <property name="url" value="${jdbc.url}"/>-->
+<!--        <property name="username" value="${jdbc.username}"/>-->
+<!--        <property name="password" value="${jdbc.password}"/>-->
+    </bean>
+
+
+    <!--开启spring注解，扫描spring注解所在的包 -->
+    <context:component-scan base-package="com.m"/>
+    <!--    &lt;!&ndash;配置RoleService&ndash;&gt;-->
+    <!--    <bean id="roleService" class="com.itheima.service.impl.RoleServiceImpl">-->
+    <!--        <property name="roleDao" ref="roleDao"/>-->
+    <!--    </bean>-->
+
+    <!--    &lt;!&ndash;配置RoleDao&ndash;&gt;-->
+    <!--    <bean id="roleDao" class="com.itheima.dao.impl.RoleDaoImpl">-->
+    <!--        <property name="jdbcTemplate" ref="jdbcTemplate"/>-->
+    <!--    </bean>-->
+
+    <!--    &lt;!&ndash;配置UserService&ndash;&gt;-->
+    <!--    <bean id="userService" class="com.itheima.service.impl.UserServiceImpl">-->
+    <!--        <property name="userDao" ref="userDao"/>-->
+    <!--        <property name="roleDao" ref="roleDao"/>-->
+    <!--    </bean>-->
+
+    <!--    &lt;!&ndash;配置UserDao&ndash;&gt;-->
+    <!--    <bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl">-->
+    <!--        <property name="jdbcTemplate" ref="jdbcTemplate"/>-->
+    <!--    </bean>-->
+    <!-- 3) 获取 SqlSessionFactory 工厂类-->
+<!--    <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+<!--        <property name="dataSource" ref="dataSource"/>-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash; 4) 搜索有哪些 mapper 实现类，把mapper接口自动配置成 spring 中的 <bean>&ndash;&gt;-->
+<!--    <bean id="scannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+
+<!--        &lt;!&ndash; name="basePackage":(起始)包名, 从这个包开始扫描&ndash;&gt;-->
+<!--        <property name="basePackage" value="com.m.mapper"/>-->
+
+<!--    </bean>-->
+
+
+</beans>
