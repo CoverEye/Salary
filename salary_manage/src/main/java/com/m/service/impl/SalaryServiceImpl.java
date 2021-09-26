@@ -28,4 +28,10 @@ public class SalaryServiceImpl implements SalaryService {
     public void updateInformation(Salary salary) {
         salaryMapper.updateInformation(salary);
     }
+
+    @Override
+    public List<Salary> selectAllSalaryByUserId() {
+        List<Salary> salaryList =salaryMapper.selectAllSalaryByUserId();
+        return null;
+    }
 }

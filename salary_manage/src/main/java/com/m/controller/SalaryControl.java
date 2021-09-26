@@ -62,7 +62,7 @@ public class SalaryControl {
         System.out.println(salaryList);
         return null;
     }
-    /*** 查询工资信息
+    /*** 更新工资信息
      * @author CloseEye
      */
     @GetMapping("/UpdateSalaryByUserId")
@@ -97,6 +97,16 @@ public class SalaryControl {
         salary.setTotalWages(totalWages);
         salary.setTakeHomePay(takeHomePay);
         salaryService.updateInformation(salary);
+        return null;
+    }
+    /*** 查询所有人工资信息
+     * @author CloseEye
+     */
+    @GetMapping("/SelectSalaryByUserId")
+    public String selectAllSalaryByUserId( HttpSession session) {
+
+        List<Salary> salaryList = salaryService.selectAllSalaryByUserId();
+        System.out.println(salaryList);
         return null;
     }
 }

@@ -10,4 +10,6 @@ public interface SalaryService {
     List<Salary> selectSalaryByUserId(String userId);
 
     void updateInformation(Salary salary);
+
+    List<Salary> selectAllSalaryByUserId();
 }

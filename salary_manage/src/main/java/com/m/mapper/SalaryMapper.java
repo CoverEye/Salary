@@ -33,10 +33,10 @@ public interface SalaryMapper {
             "`medicalInsurance`= #{medicalInsurance}, " +
             "`incomeTax`= #{incomeTax}, " +
             "`totalWages`= #{totalWages}, " +
-            "`takeHomePay`= #{takeHomePay}, " )
+            "`takeHomePay`= #{takeHomePay}, ")
     void inputInformation(Salary salary);
 
-    /*** 查询工资信息
+    /*** 查询特定工资信息
      * @author CloseEye
      */
     @Select(
@@ -47,5 +47,34 @@ public interface SalaryMapper {
     /*** 更新工资信息
      * @author CloseEye
      */
+    @Insert("UPDATE salaryinfo  " +
+            "SET `userName`= #{userName}, " +
+            "`departmentId`= #{departmentId}, " +
+            "`departmentName`= #{departmentName}, " +
+            "`year`= #{year}, " +
+            "`month`= #{month}, " +
+            "`postWage;`= #{postWage;}, " +
+            "`ageWage`= #{ageWage}, " +
+            "`fixedTotal`= #{fixedTotal}, " +
+            "`benefitWage`= #{benefitWage}, " +
+            "`overtimeOrDuty`= #{overtimeOrDuty}, " +
+            "`backPay`= #{backPay}, " +
+            "`feeForOnlyChildren`= #{feeForOnlyChildren;}, " +
+            "`housingSubsidy`= #{housingSubsidy}, " +
+            "`accumulationFund`= #{accumulationFund}, " +
+            "`oldAgeInsurance`= #{oldAgeInsurance}, " +
+            "`unemploymentInsurance`= #{unemploymentInsurance}, " +
+            "`medicalInsurance`= #{medicalInsurance}, " +
+            "`incomeTax`= #{incomeTax}, " +
+            "`totalWages`= #{totalWages}, " +
+            "`takeHomePay`= #{takeHomePay}, " +
+            "where `userId`= #{userId}")
     void updateInformation(Salary salary);
+    /*** 查询所有人工资信息
+     * @author CloseEye
+     */
+    @Select(
+            "SELECT * FROM salaryinfo  "
+    )
+    List<Salary> selectAllSalaryByUserId();
 }
