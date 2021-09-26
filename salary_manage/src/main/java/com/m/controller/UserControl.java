@@ -1,22 +1,30 @@
 package com.m.controller;
 
+import com.m.domain.User;
+import com.m.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 public class UserControl {
-    /*** 工资录入
+    @Autowired
+    private UserService userService;
+    /*** 登录
      * @author CloseEye
      */
-    @RequestMapping("/inputInformation")
-    public String createNewBook(String userId, String userName, String departmentId,
-                                String departmentName, int year, int month, double postWage,
-                                double ageWage, double fixedTotal, double benefitWage,
-                                double overtimeOrDuty, double backPay, double feeForOnlyChildren,
-                                double housingSubsidy, double accumulationFund, double oldAgeInsurance,
-                                double unemploymentInsurance, double medicalInsurance, double incomeTax,
-                                double totalWages,double takeHomePay) {
+    @RequestMapping("/login")
+    public String login(String userId, String password, HttpSession session) {
 
-        return null;
+        User user = userService.login(userId, password);
+        if (user != null) {
+            //登录成功  将user存储到session
+            session.setAttribute("user", user);
+
+            return "redirect:/index.jsp";
+        }
+        return "redirect:/login.jsp";
     }
 }
