@@ -21,7 +21,7 @@ public class SalaryServiceImpl implements SalaryService {
     @Override
     public List<Salary> selectSalaryByUserId(String userId) {
         List<Salary> salaryList =salaryMapper.selectSalaryByUserId(userId);
-        return null;
+        return salaryList;
     }
 
     @Override
@@ -32,6 +32,6 @@ public class SalaryServiceImpl implements SalaryService {
     @Override
     public List<Salary> selectAllSalaryByUserId() {
         List<Salary> salaryList =salaryMapper.selectAllSalaryByUserId();
-        return null;
+        return salaryList;
     }
 }

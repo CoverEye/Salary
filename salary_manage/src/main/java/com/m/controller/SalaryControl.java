@@ -47,7 +47,7 @@ public class SalaryControl {
         salary.setMedicalInsurance(medicalInsurance);
         salary.setIncomeTax(incomeTax);
         salary.setTotalWages(totalWages);
-        salary.setTakeHomePay(takeHomePay);
+        salary.setNetPayment(takeHomePay);
         salaryService.inputInformation(salary);
         return null;
     }
@@ -94,15 +94,14 @@ public class SalaryControl {
         salary.setUnemploymentInsurance(unemploymentInsurance);
         salary.setMedicalInsurance(medicalInsurance);
         salary.setIncomeTax(incomeTax);
-        salary.setTotalWages(totalWages);
-        salary.setTakeHomePay(takeHomePay);
+
         salaryService.updateInformation(salary);
         return null;
     }
-    /*** 查询所有人工资信息
+    /*** 统计工资信息
      * @author CloseEye
      */
-    @GetMapping("/SelectSalaryByUserId")
+    @GetMapping("/SelectAllSalaryByUserId")
     public String selectAllSalaryByUserId( HttpSession session) {
 
         List<Salary> salaryList = salaryService.selectAllSalaryByUserId();
