@@ -25,7 +25,7 @@ public class SalaryControl {
                                 double overtimeOrDuty, double backPay, double feeForOnlyChildren,
                                 double housingSubsidy, double accumulationFund, double oldAgeInsurance,
                                 double unemploymentInsurance, double medicalInsurance, double incomeTax,
-                                double totalWages, double takeHomePay) {
+                                double totalWages, double takeHomePay, HttpSession session) {
         Salary salary = new Salary();
         salary.setUserId(userId);
         salary.setUserName(userName);
@@ -49,6 +49,7 @@ public class SalaryControl {
         salary.setTotalWages(totalWages);
         salary.setNetPayment(takeHomePay);
         salaryService.inputInformation(salary);
+
         return null;
     }
 
@@ -60,8 +61,10 @@ public class SalaryControl {
 
         List<Salary> salaryList = salaryService.selectSalaryByUserId(userId);
         System.out.println(salaryList);
+        session.setAttribute("salary", salaryList);
         return null;
     }
+
     /*** 更新工资信息
      * @author CloseEye
      */
@@ -72,7 +75,7 @@ public class SalaryControl {
                                        double overtimeOrDuty, double backPay, double feeForOnlyChildren,
                                        double housingSubsidy, double accumulationFund, double oldAgeInsurance,
                                        double unemploymentInsurance, double medicalInsurance, double incomeTax,
-                                       double totalWages, double takeHomePay){
+                                       double totalWages, double takeHomePay, HttpSession session) {
 
         Salary salary = new Salary();
         salary.setUserId(userId);
@@ -98,14 +101,16 @@ public class SalaryControl {
         salaryService.updateInformation(salary);
         return null;
     }
+
     /*** 统计工资信息
      * @author CloseEye
      */
     @GetMapping("/SelectAllSalaryByUserId")
-    public String selectAllSalaryByUserId( HttpSession session) {
+    public String selectAllSalaryByUserId(HttpSession session) {
 
         List<Salary> salaryList = salaryService.selectAllSalaryByUserId();
         System.out.println(salaryList);
+        session.setAttribute("salary", salaryList);
         return null;
     }
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+    <!--     自定义别名-->
+    <typeAliases>
+        <typeAlias type="com.m.domain.User" alias="user"></typeAlias>
+    </typeAliases>
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageHelper">
+            <property name="dialect" value="mysql"/>
+        </plugin>
+    </plugins>
+
+
+    <!--    加载映射文件-->
+    <mappers>
+        <mapper resource="com/m/mapper/UserMapper.xml"></mapper>
+    </mappers>
+</configuration>

@@ -8,7 +8,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserIServiecImpl implements UserService {
+public class UserServiecImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
     @Override
@@ -20,4 +20,17 @@ public class UserIServiecImpl implements UserService {
             return null;
         }
     }
+
+    @Override
+    public User updateType(String userId,Integer userType) {
+        userMapper.updateType(userId, userType);
+        return null;
+    }
+
+    @Override
+    public User updateState(String userId, Integer userState) {
+        userMapper.updateState(userId,userState);
+        return null;
+    }
+
 }

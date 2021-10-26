@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.m.controller.RecruitControl</OriginalElement>
+  <nodes>
+    <node x="0.0" y="0.0">com.m.domain.User</node>
+    <node x="189.0" y="128.0">com.m.service.impl.RecruitServiceImpl</node>
+    <node x="192.5" y="0.0">com.m.service.RecruitService</node>
+    <node x="0.0" y="390.0">com.m.controller.RecruitControl</node>
+    <node x="128.0" y="285.0">org.springframework.stereotype.Controller</node>
+    <node x="429.0" y="285.0">com.m.domain.Recruit</node>
+    <node x="0.0" y="537.0">com.m.mapper.RecruitMapper</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.m.service.impl.RecruitServiceImpl" target="com.m.service.RecruitService">
+      <point x="0.0" y="-51.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="com.m.controller.RecruitControl" target="org.springframework.stereotype.Controller">
+      <point x="0.0" y="-51.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="403.5" y="300.0" />
+  <SelectedNodes>
+    <node>com.m.domain.User</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
