@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.m.controller.UserControl</OriginalElement>
+  <nodes>
+    <node x="0.0" y="429.5">com.m.controller.UserControl</node>
+    <node x="531.1145833333334" y="0.0">com.m.domain.User</node>
+    <node x="608.6666666666667" y="418.0">com.m.service.impl.UserServiecImpl</node>
+    <node x="111.32291666666674" y="290.0">org.springframework.stereotype.Controller</node>
+    <node x="266.36458333333337" y="267.0">com.m.service.UserService</node>
+    <node x="613.3645833333334" y="267.0">com.m.mapper.UserMapper</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.m.controller.UserControl" target="org.springframework.stereotype.Controller">
+      <point x="-2.8421709430404007E-14" y="-51.0" />
+      <point x="206.0" y="393.0" />
+      <point x="175.32291666666674" y="393.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="com.m.service.impl.UserServiecImpl" target="com.m.service.UserService">
+      <point x="-109.0" y="-62.5" />
+      <point x="663.1666666666667" y="393.0" />
+      <point x="511.61458333333337" y="393.0" />
+      <point x="81.75" y="50.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8330373001776199" x="476.0" y="271.5" />
+  <SelectedNodes>
+    <node>com.m.controller.UserControl</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

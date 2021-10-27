@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.m.controller.AdminControl</OriginalElement>
+  <nodes>
+    <node x="75.94615384615383" y="428.0">com.m.service.impl.AdminServiceImpl</node>
+    <node x="315.94615384615383" y="405.0">com.m.controller.AdminControl</node>
+    <node x="489.25" y="0.0">com.m.domain.User</node>
+    <node x="820.3051282051282" y="405.0">com.m.service.impl.UserServiecImpl</node>
+    <node x="222.3461538461538" y="288.5">com.m.service.AdminService</node>
+    <node x="0.0" y="288.5">com.m.mapper.AdminMapper</node>
+    <node x="417.25" y="288.5">org.springframework.stereotype.Controller</node>
+    <node x="587.7089743589744" y="277.0">com.m.service.UserService</node>
+    <node x="801.7089743589744" y="277.0">com.m.mapper.UserMapper</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.m.controller.AdminControl" target="com.m.service.UserService">
+      <point x="151.19999999999993" y="-62.5" />
+      <point x="656.1461538461538" y="380.0" />
+      <point x="636.2089743589744" y="380.0" />
+      <point x="-48.5" y="39.0" />
+    </edge>
+    <edge source="com.m.service.UserService" target="com.m.domain.User">
+      <point x="0.0" y="-39.0" />
+      <point x="684.7089743589744" y="257.0" />
+      <point x="588.25" y="257.0" />
+      <point x="27.0" y="108.5" />
+    </edge>
+    <edge source="com.m.service.impl.UserServiecImpl" target="com.m.domain.User">
+      <point x="81.0" y="-62.5" />
+      <point x="1022.8051282051282" y="380.0" />
+      <point x="1150.2089743589745" y="380.0" />
+      <point x="1150.2089743589745" y="237.0" />
+      <point x="624.25" y="237.0" />
+      <point x="63.0" y="108.5" />
+    </edge>
+    <edge source="com.m.service.impl.AdminServiceImpl" target="com.m.domain.User">
+      <point x="0.0" y="-39.5" />
+      <point x="185.94615384615383" y="380.0" />
+      <point x="204.50000000000006" y="380.0" />
+      <point x="204.50000000000006" y="247.0" />
+      <point x="516.25" y="247.0" />
+      <point x="-45.0" y="108.5" />
+    </edge>
+    <edge source="com.m.mapper.UserMapper" target="com.m.domain.User">
+      <point x="0.0" y="-39.0" />
+      <point x="970.7089743589744" y="247.0" />
+      <point x="606.25" y="247.0" />
+      <point x="45.0" y="108.5" />
+    </edge>
+    <edge source="com.m.controller.AdminControl" target="com.m.domain.User">
+      <point x="75.60000000000002" y="-62.5" />
+      <point x="580.5461538461539" y="380.0" />
+      <point x="566.75" y="380.0" />
+      <point x="566.75" y="257.0" />
+      <point x="570.25" y="257.0" />
+      <point x="9.0" y="108.5" />
+    </edge>
+    <edge source="com.m.service.impl.AdminServiceImpl" target="com.m.mapper.AdminMapper">
+      <point x="-73.33333333333326" y="-39.5" />
+      <point x="112.61282051282058" y="380.0" />
+      <point x="97.0" y="380.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="com.m.mapper.AdminMapper" target="com.m.domain.User">
+      <point x="0.0" y="-27.5" />
+      <point x="97.0" y="237.0" />
+      <point x="498.25" y="237.0" />
+      <point x="-63.0" y="108.5" />
+    </edge>
+    <edge source="com.m.service.impl.UserServiecImpl" target="com.m.mapper.UserMapper">
+      <point x="0.0" y="-62.5" />
+      <point x="941.8051282051282" y="380.0" />
+      <point x="970.7089743589744" y="380.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="com.m.service.impl.UserServiecImpl" target="com.m.service.UserService">
+      <point x="-81.0" y="-62.5" />
+      <point x="860.8051282051282" y="380.0" />
+      <point x="733.2089743589744" y="380.0" />
+      <point x="48.5" y="39.0" />
+    </edge>
+    <edge source="com.m.controller.AdminControl" target="org.springframework.stereotype.Controller">
+      <point x="-75.60000000000002" y="-62.5" />
+      <point x="429.3461538461538" y="380.0" />
+      <point x="481.25" y="380.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="com.m.service.impl.AdminServiceImpl" target="com.m.service.AdminService">
+      <point x="73.33333333333326" y="-39.5" />
+      <point x="-36.5" y="27.5" />
+    </edge>
+    <edge source="com.m.service.AdminService" target="com.m.domain.User">
+      <point x="0.0" y="-27.5" />
+      <point x="295.3461538461538" y="257.0" />
+      <point x="534.25" y="257.0" />
+      <point x="-27.0" y="108.5" />
+    </edge>
+    <edge source="com.m.controller.AdminControl" target="com.m.service.AdminService">
+      <point x="-151.20000000000005" y="-62.5" />
+      <point x="353.7461538461538" y="380.0" />
+      <point x="331.8461538461538" y="380.0" />
+      <point x="36.5" y="27.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9063829787234043" x="694.9999999999999" y="271.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -18,7 +18,7 @@ public class UserControl {
      */
     @RequestMapping("/login")
     public String login(String userId, String password, HttpSession session) {
-
+System.out.println("123123");
         User user = userService.login(userId, password);
         if (user != null) {
             //登录成功  将user存储到session
@@ -26,7 +26,7 @@ public class UserControl {
 
             return "redirect:/index.jsp";
         }
-        return "redirect:/login.jsp";
+        return "redirect:/1.jsp";
     }
 
 

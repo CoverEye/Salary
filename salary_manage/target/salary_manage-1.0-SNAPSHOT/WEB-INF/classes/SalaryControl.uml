@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.m.controller.SalaryControl</OriginalElement>
+  <nodes>
+    <node x="0.0" y="599.0">com.m.mapper.SalaryMapper</node>
+    <node x="457.2083333333334" y="773.0">com.m.controller.SalaryControl</node>
+    <node x="148.20833333333348" y="773.0">com.m.service.impl.SalaryServiceImpl</node>
+    <node x="447.9652777777779" y="599.0">com.m.service.SalaryService</node>
+    <node x="1008.2657407407409" y="633.5">org.springframework.stereotype.Controller</node>
+    <node x="395.88842592592596" y="0.0">com.m.domain.Salary</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.m.controller.SalaryControl" target="org.springframework.stereotype.Controller">
+      <point x="152.125" y="-74.0" />
+      <point x="1217.8333333333335" y="753.0" />
+      <point x="1072.265740740741" y="753.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="com.m.service.impl.SalaryServiceImpl" target="com.m.service.SalaryService">
+      <point x="96.33333333333331" y="-74.0" />
+      <point x="389.0416666666668" y="753.0" />
+      <point x="520.2152777777778" y="753.0" />
+      <point x="-72.25" y="62.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.49840595111583424" x="837.5" y="460.5" />
+  <SelectedNodes>
+    <node>com.m.controller.SalaryControl</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
