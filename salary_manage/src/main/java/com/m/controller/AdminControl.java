@@ -30,7 +30,7 @@ public class AdminControl {
         user.setPassword(password);
         adminService.regist(user);
 
-        return "redirect:/login.jsp";
+        return "redirect:/admin.jsp";
     }
 
     /*** 更新权限
@@ -41,6 +41,6 @@ public class AdminControl {
 
         userService.updateType(userId, userType);
 
-        return "redirect:/login.jsp";
+        return "redirect:/admin.jsp";
     }
 }

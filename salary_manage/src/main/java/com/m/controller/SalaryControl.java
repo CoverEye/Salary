@@ -50,7 +50,7 @@ public class SalaryControl {
         salary.setNetPayment(takeHomePay);
         salaryService.inputInformation(salary);
 
-        return null;
+        return "redirect:/Salary.jsp";
     }
 
     /*** 查询工资信息
@@ -62,7 +62,7 @@ public class SalaryControl {
         List<Salary> salaryList = salaryService.selectSalaryByUserId(userId);
         System.out.println(salaryList);
         session.setAttribute("salary", salaryList);
-        return null;
+        return "redirect:/Salary.jsp";
     }
 
     /*** 更新工资信息
@@ -99,7 +99,7 @@ public class SalaryControl {
         salary.setIncomeTax(incomeTax);
 
         salaryService.updateInformation(salary);
-        return null;
+        return "redirect:/Salary.jsp";
     }
 
     /*** 统计工资信息
@@ -111,6 +111,6 @@ public class SalaryControl {
         List<Salary> salaryList = salaryService.selectAllSalaryByUserId();
         System.out.println(salaryList);
         session.setAttribute("salary", salaryList);
-        return null;
+        return "redirect:/Salary.jsp";
     }
 }

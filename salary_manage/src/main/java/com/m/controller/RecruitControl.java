@@ -30,7 +30,7 @@ public class RecruitControl {
         user.setProbation(probation);
         recruitService.updateGrade(user);
 
-        return "redirect:/login.jsp";
+        return "redirect:/Recruit.jsp";
     }
 
     /*** 发布招聘信息
@@ -45,7 +45,7 @@ public class RecruitControl {
         recruit.setRecruitId(recruitID);
         recruit.setRecruitName(recruitName);
         recruitService.postRecruitInfo(recruit);
-        return "redirect:/login.jsp";
+        return "redirect:/Recruit.jsp";
     }
 
     /*** 发布招聘信息
@@ -69,6 +69,6 @@ public class RecruitControl {
 
         System.out.println(bayesMain.bayes(testdata));
 
-        return "redirect:/login.jsp";
+        return "redirect:/Recruit.jsp";
     }
 }
